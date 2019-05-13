@@ -277,6 +277,16 @@ extension BulletinViewController {
             centerXConstraint.isActive = false
             centerYConstraint.isActive = false
             widthConstraint.isActive = false
+            
+            if manager?.floatOnTop ?? false {
+                leadingConstraint.isActive = false
+                trailingConstraint.isActive = false
+                contentBottomConstraint.isActive = false
+                centerXConstraint.isActive = true
+                centerYConstraint.isActive = false
+                widthConstraint.isActive = true
+            }
+            
 
         default:
             break

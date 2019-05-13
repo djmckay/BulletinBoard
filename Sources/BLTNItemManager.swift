@@ -106,6 +106,8 @@ import UIKit
         return bulletinController?.presentingViewController != nil
     }
 
+    @objc public var floatOnTop: Bool = false
+    
     // MARK: - Private Properties
 
     var currentItem: BLTNItem

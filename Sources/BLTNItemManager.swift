@@ -98,6 +98,7 @@ import UIKit
 
     @objc public var allowsSwipeInteraction: Bool = true
     
+    @objc public var modalPresentationStyle:UIModalPresentationStyle = .overFullScreen
     /**
      * Tells us if a bulletin is currently being shown. Defaults to false
      */
@@ -172,7 +173,7 @@ extension BLTNItemManager {
         bulletinController = BulletinViewController()
         bulletinController.manager = self
 
-        bulletinController.modalPresentationStyle = .overFullScreen
+        bulletinController.modalPresentationStyle = self.modalPresentationStyle
         bulletinController.transitioningDelegate = bulletinController
         bulletinController.loadBackgroundView()
         bulletinController.setNeedsStatusBarAppearanceUpdate()
